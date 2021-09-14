@@ -1,0 +1,25 @@
+User evvelce registration-dan kecmelidir app-in funksiyalarindan istifade etmek ucun. Orada Create user-den istifade edib 
+bir user yaradib onla login olunmalisiz. Check-in customer-i registration edib ve databazada customer listine elave edir 
+Checkout ise databazadan silr. Yeni menim customer ucun crud-in create ve delete hissesi ele Check in ve Checkout-dur uygun olaraq.
+Customer-in update hissesi customer information bolmesindedir ve update olaraq customer yalniz booking-in vaxtini deyise bilir.
+
+Nezere almaq lazimdirki, customer-lar ve room-lar hech birisi eslinde databazadan silinmir, sadece bool bir deyisen varki onu true ve false
+ede-ede codu isledirik. Meselen customer checkout olunubdur(delete). Onu ne vaxtsa tezeden gelib check-in edende evvelce orada PIN-e gore 
+yoxlanis olacaqki, bu customer bu otelde ne vaxtsa check-in(create) olunub?Budaki IsCheckout bool deyiseni ile teyin edilir.
+Eger ne vaxtsa check-in  olunubsa ,onda sadece customer-in infosu update olunur, tezeden gelib customer-in name ve s. istenilmir.
+
+Nezere alinmayan EXCEPTION-lar- 
+1) Demeli biz customer-i update edende,yəni customer-in book elediyi otagin date-tini deyisende 
+bawqa customer-in hemin otagi hemin date ile ust-uste duse biler.Meselen Vahid adli customer ayin 5-den 10-na book edibdi 107 nomreli otagi
+. Bu zaman Vahid hemin booking-in tarixini deyisdikde meselen deyek Vahid yeni booking-in vaxtini gelib salmaq isteyir ayin 10-dan 15-ne
+Bu zaman eger basqa customer hemin otagi ayin 10-dan 15-ne qeder book edibse , tarixler ust uste dusur.
+
+2) Date-ler verdikde iller cox yuksek olmamalidir yeni 3000 ci il ve s daxil etdikde exception gelirki, bu exception hell olunmayb
+3) Date-ler verdikde ay ve gun duzgun qeyde olunmalidir yeni gun ucun 40 verende exception gelirki buda hell olunmayb
+
+Bu exception-larin hamisini hell etmek mumkundur , sadece code-un boyuk hissesini deyismek lazim gelir.
+
+ 
+Yerde qalan hersey oz qaydasi ile isleyir
+
+
